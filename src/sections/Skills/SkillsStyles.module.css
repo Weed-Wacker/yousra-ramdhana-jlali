@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .panel {
+    align-self: center;
+    width: 500px;
+    max-width: fit-content;
+    padding: 30px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    background-color: var(--background-color-panel);
+  }
+
+  span {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+  }
+
+  img {
+    width: 20px;
+  }
+}
+
+.skillList {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
+
+hr {
+  width: 200px;
+  height: 1px;
+  border:  none;
+  background-color: var(--text-color);
+  margin: 30px auto;
+}
+
+@media (width >= 800px) {
+  .skillList {
+    gap: 30px;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .container .panel {
+    width: 70%;
+  }
+  
+  hr {
+    width: 300px;
+  }
+}

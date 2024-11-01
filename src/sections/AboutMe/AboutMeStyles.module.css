@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .panel {
+    align-self: center;
+    width: 500px;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: var(--background-color-panel);
+  }
+}
+
+@media (width >= 800px) {
+  .container {
+    align-items: center;
+  }
+
+  .container .panel {
+    width: 70%;
+  }
+}

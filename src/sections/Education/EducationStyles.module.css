@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.panel {
+  align-self: center;
+  width: 500px;
+  padding: 30px 60px;
+  border-radius: 10px;
+  background-color: var(--background-color-panel);
+}
+
+.educationList {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  max-width: 40ch;
+  padding-bottom: 20px;
+}
+
+ul,
+li {
+  text-align: initial;
+}
+
+li ul {
+  padding-left: 20px; /* Adjust this value for the desired indentation */
+}
+
+li ul li {
+  color: var(--list-text-color);
+}
+
+@media (width >= 800px) {
+  .educationList {
+    max-width: fit-content;
+    gap: 30px;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .container .panel {
+    width: 70%;
+    max-width: fit-content;
+  }
+}

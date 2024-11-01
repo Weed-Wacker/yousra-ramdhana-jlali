@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .panel {
+    align-self: center;
+    width: 500px;
+    max-width: fit-content;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    background-color: var(--background-color-panel);
+  }
+
+  a {
+    width: fit-content;
+    text-decoration: none;
+    color: #222;
+    transition: transform 200ms ease-in-out;
+  }
+
+  img,
+  video {
+    object-fit: contain;
+    align-self: center;
+    background-color: var(--project-card-bg);
+  }
+}
+
+.Hover {
+  width: 100%; /* Full width of the parent container */
+  height: 100%; /* Full height of the parent container */
+  transition: transform 200ms ease-in-out; /* Transition for hover effect */
+}
+
+.Hover:hover {
+  transform: scale(1.15);
+}
+
+.Card {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children vertically */
+  height: 400px; /* Total height of the card */
+  width: 500px; /* Total width of the card */
+  overflow: hidden; /* Prevent overflow of children */
+  border: none;
+
+  .CardImagery {
+    max-height: 300px;
+    flex: 0 0 80%; /* Set the imagery section to take up 80% */
+    position: relative; /* Ensure that children are positioned relative to this */
+    overflow: hidden; /* Prevent overflow of children */
+    border-radius: 10px;
+  }
+  
+  .CardDescription {
+    flex: 0 0 20%; /* Set the description section to take up 20% */
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (width >= 800px) {
+  .projectsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 30px;
+  }  
+
+  .container .panel {
+    width: 70%;
+  }
+}
